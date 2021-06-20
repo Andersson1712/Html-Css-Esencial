@@ -163,10 +163,34 @@ footer strong{
 }
 .social{
   text-align: center;
-
 }
 .social img{
   margin-inline-end: 19px;
+}
+.slider-container{
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+  margin-block-end: var(--marginChild);
+}
+iframe{
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16/9;
+}
+.slider-bullet-list{
+  text-align: center;
+}
+.slider-bullet{
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: var(--primarycolor);
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 1366px) {
@@ -190,16 +214,12 @@ footer strong{
     position: relative;
     padding: 0;
   }
-
   .main .wrapper{
     inline-size: 902px;
     padding-inline-start: 85px;
   }
   .main-content{
     padding-inline-start: 85px;
-  }
-  form{
-    inline-size: 100%;
   }
   form input{
     display: inline-block;
