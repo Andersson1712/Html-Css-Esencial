@@ -10,7 +10,6 @@ body{
   margin: 0;
   font-family: 'Roboto';
   color: var(--primarycolor);
- inline-size: 100vw;
 }
 html{
   scroll-behavior: smooth;
@@ -18,27 +17,43 @@ html{
 .hero{
   block-size: 50px;
   background-size: 6.6%;
-  background-image: url(./images/patron-1.png),linear-gradient(to top, rgba(255,255,255,.5) 15px,transparent);
+  background-image: url(../images/patron-1.png),linear-gradient(to top, rgba(255,255,255,.5) 15px,transparent);
 }
-details{
-  margin-block-start: var(--marginChild);
+ .header-wrapper{
+   margin-inline: var(--marginChild);
+ }
+ details, header h4:nth-of-type(2){
+   display: none;
+ }
+.projects li{
+  color: #808080;
+  list-style: none;
 }
-summary{
-  color: var(--threecolor);
-  font-weight: 700;
+.projects li:first-child{
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  padding-block: 8px;
+  padding-inline-start: 8px;
+}
+.projects li, h4{
+  font-size: 14px;
+}
+h4{
+  margin-block-end: var(--marginChild);
 }
 li a{
  text-decoration: none;
  color: inherit;
  font-weight: 400;
- line-height: 24px;
 }
-ol li, ul li{
+ol li, ul li, h4, li a, .projects li{
   line-height: 24px;
 }
 ul li{
   margin-block: var(--marginChild);
 }
+
 hr{
   margin-block: var(--marginMiddle);
 }
@@ -139,6 +154,9 @@ form input{
   font-size: 16px;
   border: 1px solid var(--threecolor);
 }
+form input:nth-of-type(2){
+   position: absolute;
+}
 form input::placeholder{
   color: var(--secondarycolor);
 }
@@ -146,6 +164,9 @@ form input[type="submit"]{
   border: none;
   background-color: #000;
   color: white;
+  padding-inline: 16px;
+  position: relative;
+  right: -180px;
 }
 footer{
   block-size: 174px;
@@ -192,37 +213,49 @@ iframe{
   background-color: var(--primarycolor);
   border-radius: 50%;
 }
-
-@media screen and (min-width: 1366px) {
+@media screen and (min-width:1366px) {
   .hero{
     block-size: 350px;
   }
-  header{
-    position: sticky;
+   details, header h4:nth-of-type(2){
+     display: block;
+   }
+   header{
     inset-block-start:0;
     margin-inline-end: 24px;
   }
-  .header-wrapper{
+   .header-wrapper{
     position: absolute;
-    inline-size: 208px;
-    margin-inline-start: 116px;
-    padding-inline-start: 116px;
+    max-inline-size: 536px;
     display: inline-block;
     inset-inline-start: -116px;
   }
-  .header-content{
+  .header-content, .header-wrapper{
+    margin-inline-start: 116px;
+  }
+   .header-content{
     position: relative;
-    padding: 0;
+    margin-inline-end: 160px;
+  }
+  details{
+    margin-block-start: var(--marginChild);
+  }
+  summary, h4{
+    color: var(--threecolor);
+    font-weight: 700;
   }
   .main .wrapper{
     inline-size: 902px;
+    margin-inline-end: 116px;
+  }
+  .main-content, .main .wrapper{
     padding-inline-start: 85px;
   }
-  .main-content{
-    padding-inline-start: 85px;
-  }
+}
+@media screen and (min-width:728px) {
   form input{
     display: inline-block;
     margin-inline-end: 4px;
   }
 }
+

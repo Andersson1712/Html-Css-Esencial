@@ -1,0 +1,178 @@
+:root{
+  --roboto: Roboto 700 normal 14px/24px;
+  --parrafonuni: Nunito 700 normal;
+
+}
+
+body{
+  font-family: 'Nunito','Roboto', sans-serif;
+  background-color: #251F24;
+  font: var(--parrafonuni);
+  color: #A5A3A5;
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+h1, h2, h3{
+  color: #fff;
+}
+h3{
+  margin-block: 16x;
+  font-weight: 400;
+}
+h2{
+  margin-inline-end: 24px;
+  font-size: 24px;
+  line-height: 32.74px;
+}
+p{
+  font-size: 17px;
+  line-height: 24px;
+}
+hr{
+  border: 1px solid #616161;
+  margin-block: 40px;
+}
+.hero{
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  block-size: 96px;
+}
+.header-wrapper{
+  min-inline-size: 306px;
+  margin-inline: 27px;
+  font: var(--roboto);
+}
+.header-wrapper h4{
+  color: #fff;
+  margin-block: 16px;
+}
+details, h4:nth-of-type(2){
+  display: none;
+}
+.projects{
+  margin: 0;
+  padding: 0;
+}
+.projects a{
+  font: var(--roboto);
+  color: #A5A3A5;
+  text-decoration: none;
+}
+.projects li{
+  margin-block: 8px;
+  padding: 8px;
+  list-style: none;
+}
+.projects li:nth-of-type(2){
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+}
+.main .wrapper{
+  min-inline-size: 360x;
+  padding-inline: 16px;
+}
+section h3{
+  counter-increment: number;
+}
+section h3::before{
+  content: counter(number) ". ";
+}
+section:nth-of-type(2) img, section:nth-of-type(3) img{
+ inline-size: 100%;
+}
+section:nth-of-type(3) h2 + p{
+  color: #fff;
+}
+section:nth-of-type(3) ol + p{
+  color: #fff;
+  font-weight: 400;
+}
+section:nth-of-type(3) ul li{
+  list-style: none;
+}
+section:nth-of-type(3) ul li::before{
+  content: "";
+  inline-size: 8px;
+  block-size: 8px;
+  display: inline-block;
+  position: relative;
+  left: -8px;
+  top: 1px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+}
+blockquote{
+  background-color: #3A3539;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0;
+}
+blockquote p:first-child{
+  line-height: 32px;
+}
+blockquote p:last-child::before{
+  content: "- ";
+}
+pre{
+  background-color: #3A3539;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+ol li, ul li{
+  line-height: 24px;
+}
+.slider-container{
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+  margin-block-end: 16px;
+}
+iframe{
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16/9;
+}
+.slider-bullet-list{
+  text-align: center;
+}
+.slider-bullet{
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #424242;
+  border-radius: 50%;
+}
+footer{
+  block-size: 174px;
+  background: #fff;
+  color: #251F24;
+  padding-block-start: 48px;
+  padding-inline: 43px;
+}
+footer strong{
+  display: block;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin-block-end: 16px;
+}
+.social{
+  text-align: center;
+}
+.social img{
+  margin-inline-end: 19px;
+}
